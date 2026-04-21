@@ -1,0 +1,22 @@
+# Framework principal
+Flask==3.0.0
+
+# Base de données
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.5
+
+# Authentification admin
+Flask-Login==0.6.3
+
+# Formulaire & validation
+Flask-WTF==1.2.1
+WTForms==3.1.1
+
+# Envoi d'emails
+Flask-Mail==0.10.0
+
+# Variables d'environnement
+python-dotenv==1.0.0
+
+# Sécurité des mots de passe
+Werkzeug==3.0.1
