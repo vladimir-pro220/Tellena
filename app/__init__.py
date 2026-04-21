@@ -36,6 +36,16 @@ def create_app(config_name='default'):
     mail.init_app(app)
 
     # ----------------------------------------------------------------
+    # Flask-Login : user_loader OBLIGATOIRE
+    # L'import de User est fait ICI pour éviter l'import circulaire
+    # ----------------------------------------------------------------
+    @login.user_loader
+    def load_user(user_id):
+        """Charge un utilisateur à partir de son ID (requis par Flask-Login)."""
+        from app.models.user import User  # ← Import À L'INTÉRIEUR de la fonction
+        return User.query.get(int(user_id))
+
+    # ----------------------------------------------------------------
     # Enregistrement des Blueprints (routes)
     # ----------------------------------------------------------------
 

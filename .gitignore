@@ -1,0 +1,168 @@
+# ============================================================
+# THENELLA Ministries — .gitignore
+# Exclusions pour projet Flask / Python
+# ============================================================
+
+# -------------------------------
+# Environnement virtuel
+# -------------------------------
+venv/
+env/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# -------------------------------
+# Base de données SQLite
+# -------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# -------------------------------
+# Fichiers Python compilés
+# -------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.pyc
+
+# -------------------------------
+# Variables d'environnement
+# -------------------------------
+.env
+.flaskenv
+.venv
+.env.local
+.env.production
+.secrets
+
+# -------------------------------
+# Flask / Werkzeug
+# -------------------------------
+instance/
+.webassets-cache
+.env
+flask_session/
+
+# -------------------------------
+# Migrations (optionnel : décommenter si tu veux exclure les scripts de migration)
+# -------------------------------
+# migrations/
+# migrations/versions/*.py
+# !migrations/versions/__init__.py
+
+# -------------------------------
+# Logs et fichiers temporaires
+# -------------------------------
+*.log
+*.logs
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+*.pid
+*.seed
+*.pid.lock
+
+# -------------------------------
+# IDEs et éditeurs
+# -------------------------------
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.vimrc
+*.swp
+
+# -------------------------------
+# Fichiers de test et couverture
+# -------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.tox/
+
+# -------------------------------
+# Fichiers de dump et sauvegarde
+# -------------------------------
+*.dump
+*.dump.sql
+backup/
+*.backup
+*.old
+*.orig
+
+# -------------------------------
+# Cache et fichiers générés
+# -------------------------------
+.cache/
+*.cache
+*.pycache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# -------------------------------
+# Fichiers propres à Flask-Mail (attachments temporaires)
+# -------------------------------
+*.eml
+*.msg
+
+# -------------------------------
+# Certificats SSL (ne pas committer en dev)
+# -------------------------------
+*.crt
+*.key
+*.pem
+*.p12
+
+# -------------------------------
+# Fichiers propres au projet THENELLA
+# -------------------------------
+create_admin.py   # Optionnel : exclure le script admin (car il contient des identifiants en clair dans l'exemple)
+check_db.py       # Script de test temporaire
+
+# -------------------------------
+# Fichiers média générés (garder les sources, exclure les générés)
+# -------------------------------
+*.webp.tmp
+*.jpg.tmp
+*.png.tmp
